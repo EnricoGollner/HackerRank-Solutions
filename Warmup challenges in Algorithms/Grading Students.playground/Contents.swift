@@ -19,22 +19,20 @@ import Cocoa
 let grades = [4, 73, 67, 38, 33]
 
 func gradingStudents(grades: [Int]) -> [Int] {
-    
     var finalGrades = [Int]()
-    
-    for i in 0..<grades.count {
-        let nextMultiple = (grades[i] / 5 + 1) * 5
-        let diff = nextMultiple - grades[i]
         
-        if diff < 3 && grades[i] >= 38 {
-            finalGrades.append(grades[i] + diff)
+        for grade in grades {
+            let nextMultiple = (grade/5 + 1) * 5
+            let diff = nextMultiple - grade
+            
+            if diff < 3 && grade >= 38 {
+                finalGrades.append(grade + diff)
+            } else {
+                finalGrades.append(grade)
+            }
         }
-        else {
-            finalGrades.append(grades[i])
-        }
-    }
-    
-    return finalGrades
+        
+        return finalGrades
 }
 
 print(gradingStudents(grades: grades))
