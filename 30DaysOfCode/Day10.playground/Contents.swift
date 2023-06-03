@@ -15,18 +15,16 @@ var max = 0
 while num > 0 {
     if num % 2 == 1 {
         sum += 1
-
-        if sum > max {  // se soma == 1
+        
+        if sum > max {
             max = sum
         }
-
+        
     } else {
         sum = 0
     }
-
-    num = num / 2
+    
+    num /= 2
 }
 
 print(max)
-
-
