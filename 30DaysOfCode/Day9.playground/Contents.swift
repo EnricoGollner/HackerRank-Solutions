@@ -18,7 +18,7 @@ import Foundation
 */
 
 func factorial(n: Int) -> Int {
-    if n == 1 {
+    if n < 2 {
         return 1
     }
     
